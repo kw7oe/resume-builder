@@ -14,5 +14,52 @@
       </p>
     </header>
 
+    <div>
+      <div>
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+      </div>
+
+      <div>
+        <h2>Work Experience</h2>
+        {{#each work_experiences}}
+
+        <div>
+          <h3>{{ this.company_name }}</h3>
+
+          {{#each this.titles }}
+            <h4>{{ this.title }}</h4>
+            <p>{{ this.duration }}</p>
+            <ul>
+            {{#each this.contributions }}
+              <li>{{ this }}</li>
+            {{/each}}
+            </ul>
+          {{/each}}
+
+        </div>
+
+        {{/each}}
+      </div>
+
+      <div>
+        <h2>Skills</h2>
+        <ul>
+          {{#each skills}}
+            <li>{{this.name}}: {{ this.value }}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div>
+        <h2>Education</h2>
+        <ul>
+          {{#each educations}}
+            <li>{{this.title}}, {{ this.place }}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
   </body>
 </html>
