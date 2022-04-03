@@ -4,37 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      a {
+        text-decoration: underline !important;
+      }
+
+    </style>
   </head>
 
-  <body>
-    <header>
-      <h1>{{ name }}</h1>
-      <p>
-      {{ email }} • {{ github_url }} • {{ linkedin_url }} • {{ location }}
+
+  <body class="mx-4 my-8">
+    <header class="text-center mb-8">
+      <h1 class="text-2xl">{{ name }}</h1>
+      <p class="italic">
+      {{ email }} • <a href="https://{{ github_url }}">{{ github_url }}</a> • <a href="https://{{ linkedin_url }}">{{ linkedin_url }}</a> • {{ location }}
       </p>
     </header>
 
     <div>
-      <div>
-        <h2>Summary</h2>
+      <div class="mb-8">
+        <h2 class="text-xl">Summary</h2>
         <p>{{ summary }}</p>
       </div>
 
-      <div>
-        <h2>Work Experience</h2>
+      <div class="mb-8">
+        <h2 class="text-xl">Work Experience</h2>
         {{#each work_experiences}}
 
         <div>
-          <h3>{{ this.company_name }}</h3>
+          <h3 class="font-bold">{{ this.company_name }}</h3>
 
           {{#each this.titles }}
-            <h4>{{ this.title }}</h4>
-            <p>{{ this.duration }}</p>
-            <ul>
-            {{#each this.contributions }}
-              <li>{{ this }}</li>
-            {{/each}}
-            </ul>
+            <div class="mb-4">
+              <h4 class="font-semibold">{{ this.title }}</h4>
+              <p class="italic text-xs mb-2">{{ this.duration }}</p>
+              <ul class="list-disc list-inside">
+              {{#each this.contributions }}
+                <li>{{ this }}</li>
+              {{/each}}
+              </ul>
+            </div>
           {{/each}}
 
         </div>
@@ -42,20 +51,20 @@
         {{/each}}
       </div>
 
-      <div>
-        <h2>Skills</h2>
+      <div class="mb-8">
+        <h2 class="text-xl">Skills</h2>
         <ul>
           {{#each skills}}
-            <li>{{this.name}}: {{ this.value }}</li>
+            <li><strong>{{this.name}}:</strong> {{ this.value }}</li>
           {{/each}}
         </ul>
       </div>
 
-      <div>
-        <h2>Education</h2>
+      <div class="mb-8">
+        <h2 class="text-xl">Education</h2>
         <ul>
           {{#each educations}}
-            <li>{{this.title}}, {{ this.place }}</li>
+            <li><strong>{{this.title}}</strong> • {{ this.place }}</li>
           {{/each}}
         </ul>
       </div>
