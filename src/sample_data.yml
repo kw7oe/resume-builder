@@ -1,11 +1,11 @@
 ---
-name: Kai Wern Choong
+name:
 email:
-github_url: github.com/kw7oe
+github_url:
 linkedin_url:
-location: Malaysia (GMT +8)
+location:
 
-summary: Hello world
+summary:
 
 skills:
   - name: Programming Languages
@@ -15,9 +15,9 @@ skills:
   - name:  Working Knowledge of
     value: Bash, JavaScript, TypeScript, React, React Native
   - name:  Others
-    value: Writing, Mentoring, Product Thinking, Google Search
+    value: Mentoring
   - name:  Languages
-    value: English, Mandarin
+    value: English
 
 educations:
   - title: Your University
@@ -40,3 +40,12 @@ work_experiences:
           - f for fish
           - g for google
           - h for hashicorp
+  - company_name: John
+    titles:
+      - title: Software Engineer Intern
+        duration: April 2020 to June 2020
+        contributions:
+          - a for apple
+          - b for bing
+          - c for cmu
+          - d for dtrace

@@ -5,6 +5,13 @@ The code read the data from `data.yml` during compile time _(since
 we use `include_str!`)_, convert it from `yaml` to `json` and pass it to
 `handlerbars` to generate the final HTML.
 
+## Usage
+
+1. Rename the `sample_data.yml` to `data.yml`.
+2. Update the data in the new `data.yml` file.
+3. Run `cargo run`.
+4. View the generated HTMl at `target/resume.html`
+
 Currently, there's no way to export it as PDF. To do that, open the HTML file
 in any browser and use the print function and save it as PDF.
 
