@@ -1,0 +1,42 @@
+---
+name: Kai Wern Choong
+email:
+github_url: github.com/kw7oe
+linkedin_url:
+location: Malaysia (GMT +8)
+
+summary: Hello world
+
+skills:
+  - name: Programming Languages
+    value: Elixir, Rust, Ruby
+  - name:  Technologies
+    value: PostgreSQL, AWS, Terraform, Github Action, Docker, Ansible
+  - name:  Working Knowledge of
+    value: Bash, JavaScript, TypeScript, React, React Native
+  - name:  Others
+    value: Writing, Mentoring, Product Thinking, Google Search
+  - name:  Languages
+    value: English, Mandarin
+
+educations:
+  - title: Your University
+    place: Location
+
+work_experiences:
+  - company_name: Workflow
+    titles:
+      - title: Senior Software Engineer
+        duration: July 2020 to April 2022
+        contributions:
+          - a for apple
+          - b for bing
+          - c for cmu
+          - d for dtrace
+      - title: Software Engineer
+        duration: June 2019 to July 2020
+        contributions:
+          - e for elixir
+          - f for fish
+          - g for google
+          - h for hashicorp

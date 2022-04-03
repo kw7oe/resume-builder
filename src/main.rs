@@ -8,7 +8,7 @@ fn main() {
         .unwrap();
     let data: serde_json::Value = serde_yaml::from_str(include_str!("data.yml")).unwrap();
 
-    let mut output_file = File::create("target/table.html").unwrap();
+    let mut output_file = File::create("target/resume.html").unwrap();
     handlebars
         .render_to_write("template", &data, &mut output_file)
         .unwrap();
