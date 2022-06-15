@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Cover Letter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      a {
+        text-decoration: underline !important;
+      }
+
+    </style>
+  </head>
+
+
+  <body class="mx-4 my-12">
+    <header class="mb-12">
+      <div class="mb-12">
+        <p class="font-semibold">{{ name }}</p>
+        <p class="text-gray-700">{{ address }}</p>
+        <p class="text-gray-700">{{ email }}</p>
+      </div>
+
+      <p>Dear {{ cover.dear }},</p>
+    </header>
+
+    <div class="mb-16">
+      {{#each cover.before_paragraphs }}
+        <p class="mb-4">{{{ this }}}</p>
+      {{/each}}
+
+      <ul class="list-disc list-inside mb-8 pl-4">
+        {{#each cover.reasons_to_hire }}
+          <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+
+      {{#each cover.after_paragraphs }}
+        <p class="mb-4">{{ this }}</p>
+      {{/each}}
+    </div>
+
+    <div>
+      <p>Sincerely,</p>
+      <p>{{ name }}</p>
+    </div>
+  </body>
+</html>

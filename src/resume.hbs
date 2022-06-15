@@ -13,7 +13,7 @@
   </head>
 
 
-  <body class="mx-4 my-8">
+  <body class="mx-4 my-4">
     <header class="text-center mb-8">
       <h1 class="text-2xl">{{ name }}</h1>
       <p class="italic">
@@ -22,13 +22,15 @@
     </header>
 
     <div>
+      {{#if summary }}
       <div class="mb-8">
         <h2 class="text-xl">Summary</h2>
         <p>{{ summary }}</p>
       </div>
+      {{/if}}
 
       <div class="mb-8">
-        <h2 class="text-xl">Work Experience</h2>
+        <h2 class="text-xl">Experience</h2>
         {{#each work_experiences}}
 
         <div>
@@ -40,7 +42,7 @@
               <p class="italic text-xs mb-2">{{ this.duration }}</p>
               <ul class="list-disc list-inside">
               {{#each this.contributions }}
-                <li>{{ this }}</li>
+                <li>{{{ this }}}</li>
               {{/each}}
               </ul>
             </div>
@@ -64,7 +66,8 @@
         <h2 class="text-xl">Education</h2>
         <ul>
           {{#each educations}}
-            <li><strong>{{this.title}}</strong> • {{ this.place }}</li>
+            <p><strong>{{ this.place }}</strong>, {{ this.title }}, {{
+              this.duration }}</h3>
           {{/each}}
         </ul>
       </div>
